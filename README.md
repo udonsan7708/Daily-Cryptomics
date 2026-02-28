@@ -2,6 +2,9 @@
 
 > Automated daily crypto news digest: tweets in, comics image + tweet out.
 
+![Python](https://img.shields.io/badge/python-3.11+-blue)
+![License](https://img.shields.io/badge/license-MIT-green)
+
 ## Overview
 
 The **Daily Cryptomics** agent is a five-step automated pipeline that runs on a
