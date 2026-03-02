@@ -14,11 +14,16 @@ from __future__ import annotations
 
 import sys
 
+import schedule
+import time
+
 from src.agents.daily_cryptomics import DailyCryptomicsAgent
 from src.utils.config import Config
 from src.utils.logger import get_logger
 
 logger = get_logger("daily_cryptomics.main")
+
+_CRON_TIME = "09:00"
 
 
 def main() -> int:
@@ -29,8 +34,18 @@ def main() -> int:
         return 2
 
     agent = DailyCryptomicsAgent(config)
-    report = agent.run()
-    return 0 if report.success else 1
+
+    if "--schedule" in sys.argv:
+        logger.info("Scheduler mode: running daily at %s UTC", _CRON_TIME)
+        schedule.every().day.at(_CRON_TIME).do(agent.run)
+        while True:
+            schedule.run_pending()
+            time.sleep(30)
+    else:
+        report = agent.run()
+        return 0 if report.success else 1
+
+    return 0
 
 
 if __name__ == "__main__":
