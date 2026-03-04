@@ -1,0 +1,30 @@
+# Crypto Twitter sources monitored by the Daily Cryptomics agent
+sources:
+  - handle: hiwhaledegen
+    label: Whale Degen
+  - handle: DegenerateNews
+    label: Degen News
+  - handle: CryptoBanter
+    label: Crypto Banter
+  - handle: WuBlockchain
+    label: Wu Blockchain
+  - handle: DegenSpartan
+    label: Degen Spartan
+  - handle: CryptoHayes
+    label: Arthur Hayes
+  - handle: inversebrah
+    label: Inverse Brah
+  - handle: cobie
+    label: Cobie
+
+hashtags:
+  - "#CryptoNews"
+  - "#DegenDaily"
+  - "#DailyCryptomics"
+  - "#Crypto"
+  - "#Web3"
+
+image_style: >
+  Dynamic comics/cartoon style with thick outlines, dynamic panels, speech bubbles
+  and vibrant colors. Bold superhero aesthetic with crypto characters. High contrast.
+  Daily Cryptomics branding visible. Energetic and eye-catching.
